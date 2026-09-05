@@ -27,99 +27,51 @@
             height: 320px;
             max-height: 400px;
         }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 360px;
-            }
-        }
-        .tab-btn.active {
-            background-color: #FFFFFF;
-            color: #1E3A8A;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-            font-weight: 700;
-        }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.3s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(4px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media print {
-            header, footer, .no-print {
-                display: none !important;
-            }
-            body {
-                background-color: #FFFFFF !important;
-                color: #000000 !important;
-            }
-            main {
-                max-width: 100% !important;
-                padding: 0 !important;
-                margin: 0 !important;
-            }
-            .tab-content {
-                display: block !important;
-                page-break-after: always;
-            }
-            .chart-container {
-                height: 280px !important;
-                max-height: 280px !important;
-            }
-            .shadow-sm, .shadow-md, .shadow-2xs {
-                box-shadow: none !important;
-            }
-            .border {
-                border-color: #CBD5E1 !important;
-            }
-        }
     </style>
 </head>
-<body class="bg-slate-50 min-h-screen flex flex-col">
+<body class="p-4 md:p-6">
 
-    <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50 border-b border-slate-800" style="background-color: #1E3A8A;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-2xl border border-white/20">
-                        🏢
-                    </div>
-                    <div>
-                        <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white">
-                            ผังบุคลากร สำนักบริหารเทคโนโลยีสารสนเทศ
-                        </h1>
-                        <p class="text-xs sm:text-sm text-blue-200 font-sarabun flex items-center gap-2 mt-0.5">
-                            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-                            คำสั่งมอบหมายหน้าที่ความรับผิดชอบ ผู้อนุมัติ: นางสาวมุทิตา ชูประดิษฐ์
-                        </p>
-                    </div>
+    <!-- 📍 วางแทนที่กล่องสีน้ำเงินเดิมตรงนี้ (หลัง <body>) -->
+    <header class="bg-[#1e3a8a] text-white rounded-2xl max-w-6xl mx-auto p-4 md:p-6 shadow-md mb-6">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+            
+            <!-- ฝั่งซ้าย: ข้อความหัวข้อ -->
+            <div class="flex items-start gap-3">
+                <div class="p-2.5 bg-white/10 rounded-xl flex-shrink-0 mt-1">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
                 </div>
-
-                <div class="flex flex-wrap items-center gap-3">
-                    <div class="flex items-center bg-blue-950/60 p-1.5 rounded-xl border border-blue-800/50 self-start lg:self-auto no-print">
-                        <button onclick="switchTab('chart')" id="tab-chart" class="tab-btn active px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium transition text-blue-100 hover:text-white flex items-center gap-1.5">
-                            <span>🌳</span> ผังโครงสร้างองค์กร
-                        </button>
-                        <button onclick="switchTab('directory')" id="tab-directory" class="tab-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium transition text-blue-100 hover:text-white flex items-center gap-1.5">
-                            <span>👥</span> รายชื่อบุคลากร (ทำเนียบรวม)
-                        </button>
-                        <button onclick="switchTab('analytics')" id="tab-analytics" class="tab-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium transition text-blue-100 hover:text-white flex items-center gap-1.5">
-                            <span>📊</span> สรุปวิเคราะห์ & KPIs
-                        </button>
-                    </div>
-
-                    <div class="flex items-center gap-2 no-print">
-                                        </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold leading-tight">
+                        ผังบุคลากร สำนักบริหารเทคโนโลยีสารสนเทศ
+                    </h1>
+                    <div class="border-t border-white/20 my-2"></div>
+                    <p class="text-xs md:text-sm text-blue-100 flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-green-400 inline-block"></span>
+                        คำสั่งมอบหมายหน้าที่ความรับผิดชอบ ผู้อนุมัติ: นางสาวมุทิตา ชูประดิษฐ์
+                    </p>
                 </div>
             </div>
+
+            <!-- ฝั่งขวา: ปุ่มเมนู -->
+            <div class="flex bg-slate-900/40 p-1.5 rounded-xl border border-white/10 self-start lg:self-center">
+                <a href="#" class="px-3 py-1.5 rounded-lg bg-white text-slate-900 font-medium text-xs md:text-sm shadow-sm transition">
+                    ผังโครงสร้างองค์กร
+                </a>
+                <a href="#" class="px-3 py-1.5 rounded-lg text-white/80 hover:text-white hover:bg-white/10 font-medium text-xs md:text-sm transition">
+                    รายชื่อบุคลากร (ทำเนียบรวม)
+                </a>
+                <a href="#" class="px-3 py-1.5 rounded-lg text-white/80 hover:text-white hover:bg-white/10 font-medium text-xs md:text-sm transition">
+                    สรุปวิเคราะห์ & KPIs
+                </a>
+            </div>
+
         </div>
     </header>
 
+    <!-- ⬇️ โค้ดกล่องผู้บริหารด้านล่างและส่วนอื่นๆ ของคุณอยู่ตรงนี้ต่อได้เลย -->
+</body>
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6" id="pdf-export-content">
 
         <section id="content-chart" class="tab-content active space-y-8 bg-slate-50 p-2 rounded-xl">
