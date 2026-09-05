@@ -76,45 +76,7 @@
 </html>
 <body class="bg-slate-50 min-h-screen flex flex-col">
 
-    <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50 border-b border-slate-800" style="background-color: #1E3A8A;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-2xl border border-white/20">
-                        🏢
-                    </div>
-                    <div>
-                        <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white">
-                            ผังบุคลากร สำนักบริหารเทคโนโลยีสารสนเทศ
-                        </h1>
-                        <p class="text-xs sm:text-sm text-blue-200 font-sarabun flex items-center gap-2 mt-0.5">
-                            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-                            คำสั่งมอบหมายหน้าที่ความรับผิดชอบ ผู้อนุมัติ: นางสาวมุทิตา ชูประดิษฐ์
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex flex-wrap items-center gap-3">
-                    <div class="flex items-center bg-blue-950/60 p-1.5 rounded-xl border border-blue-800/50 self-start lg:self-auto no-print">
-                        <button onclick="switchTab('chart')" id="tab-chart" class="tab-btn active px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium transition text-blue-100 hover:text-white flex items-center gap-1.5">
-                            <span>🌳</span> ผังโครงสร้างองค์กร
-                        </button>
-                        <button onclick="switchTab('directory')" id="tab-directory" class="tab-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium transition text-blue-100 hover:text-white flex items-center gap-1.5">
-                            <span>👥</span> รายชื่อบุคลากร (ทำเนียบรวม)
-                        </button>
-                        <button onclick="switchTab('analytics')" id="tab-analytics" class="tab-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium transition text-blue-100 hover:text-white flex items-center gap-1.5">
-                            <span>📊</span> สรุปวิเคราะห์ & KPIs
-                        </button>
-                    </div>
-
-                    <div class="flex items-center gap-2 no-print">
-                                        </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6" id="pdf-export-content">
+      <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6" id="pdf-export-content">
 
         <section id="content-chart" class="tab-content active space-y-8 bg-slate-50 p-2 rounded-xl">
             
