@@ -1,43 +1,15 @@
 <html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ผังบุคลากรและบทวิเคราะห์สารสนเทศ สำนักบริหารเทคโนโลยีสารสนเทศ</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
-    <style>
-        body {
-            font-family: 'Prompt', 'Sarabun', sans-serif;
-            background-color: #F8FAFC;
-            color: #0F172A;
-        }
-        .font-sarabun {
-            font-family: 'Sarabun', sans-serif;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 320px;
-            max-height: 400px;
-        }
-    </style>
 </head>
-<body class="p-4 md:p-6">
+<body class="bg-slate-50 p-4 md:p-6">
 
-    <!-- 📍 วางแทนที่กล่องสีน้ำเงินเดิมตรงนี้ (หลัง <body>) -->
+    <!-- 🔷 กล่อง Header สีน้ำเงิน (ปรับขนาดให้กระชับและโค้งมนแล้ว) -->
     <header class="bg-[#1e3a8a] text-white rounded-2xl max-w-6xl mx-auto p-4 md:p-6 shadow-md mb-6">
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             
-            <!-- ฝั่งซ้าย: ข้อความหัวข้อ -->
+            <!-- ฝั่งซ้าย: ไอคอน + ข้อความหัวข้อ -->
             <div class="flex items-start gap-3">
                 <div class="p-2.5 bg-white/10 rounded-xl flex-shrink-0 mt-1">
+                    <!-- ไอคอนรูปอาคาร/องค์กร -->
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                     </svg>
@@ -54,7 +26,7 @@
                 </div>
             </div>
 
-            <!-- ฝั่งขวา: ปุ่มเมนู -->
+            <!-- ฝั่งขวา: เมนูสลับหน้า (ปรับขนาดปุ่มให้พอดี) -->
             <div class="flex bg-slate-900/40 p-1.5 rounded-xl border border-white/10 self-start lg:self-center">
                 <a href="#" class="px-3 py-1.5 rounded-lg bg-white text-slate-900 font-medium text-xs md:text-sm shadow-sm transition">
                     ผังโครงสร้างองค์กร
@@ -69,9 +41,6 @@
 
         </div>
     </header>
-
-    <!-- ⬇️ โค้ดกล่องผู้บริหารด้านล่างและส่วนอื่นๆ ของคุณอยู่ตรงนี้ต่อได้เลย -->
-
 </body>
 </html>
 <body class="bg-slate-50 min-h-screen flex flex-col">
