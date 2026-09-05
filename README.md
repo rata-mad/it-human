@@ -8,7 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
     <style>
         body {
             font-family: 'Prompt', 'Sarabun', sans-serif;
@@ -30,12 +29,10 @@
     </style>
 </head>
 <body class="p-4 md:p-6">
-
     <!-- 📍 วางแทนที่กล่องสีน้ำเงินเดิมตรงนี้ (หลัง <body>) -->
     <header class="bg-[#1e3a8a] text-white rounded-2xl max-w-6xl mx-auto p-4 md:p-6 shadow-md mb-6">
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-            
-            <!-- ฝั่งซ้าย: ข้อความหัวข้อ -->
+                        <!-- ฝั่งซ้าย: ข้อความหัวข้อ -->
             <div class="flex items-start gap-3">
                 <div class="p-2.5 bg-white/10 rounded-xl flex-shrink-0 mt-1">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,7 +50,6 @@
                     </p>
                 </div>
             </div>
-
             <!-- ฝั่งขวา: ปุ่มเมนู -->
             <div class="flex bg-slate-900/40 p-1.5 rounded-xl border border-white/10 self-start lg:self-center">
                 <a href="#" class="px-3 py-1.5 rounded-lg bg-white text-slate-900 font-medium text-xs md:text-sm shadow-sm transition">
@@ -73,15 +69,12 @@
     <!-- ⬇️ โค้ดกล่องผู้บริหารด้านล่างและส่วนอื่นๆ ของคุณอยู่ตรงนี้ต่อได้เลย -->
 </body>
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6" id="pdf-export-content">
-
         <section id="content-chart" class="tab-content active space-y-8 bg-slate-50 p-2 rounded-xl">
-            
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+                        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
                 <div class="text-center max-w-3xl mx-auto space-y-4">
                     <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-900 font-sarabun">
                         👑 ผู้บริหารและผู้เชี่ยวชาญกำกับดูแล
                     </span>
-                    
                     <div class="flex flex-col items-center gap-2 pt-2">
                         <div class="w-full max-w-lg bg-gradient-to-br from-slate-900 to-blue-950 text-white rounded-xl p-4 border border-slate-700 shadow flex items-start gap-3">
                             <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center text-xl shrink-0">
@@ -93,7 +86,6 @@
                                 <p class="text-xs text-slate-300 font-sarabun mt-0.5">ผู้อำนวยการสำนัก / ผู้อนุมัติคำสั่งมอบหมายหน้าที่</p>
                             </div>
                         </div>
-
                         <div class="flex flex-col items-center py-1">
                             <div class="w-0.5 h-6 bg-blue-600"></div>
                             <div class="text-blue-600 text-xs font-bold leading-none">▼</div>
@@ -112,7 +104,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="text-center text-slate-400 text-sm font-sarabun flex items-center justify-center gap-2">
                 <span class="h-0.5 w-12 bg-slate-300 inline-block"></span>
                 <span>จำนวนกำลังพลจำแนกตาม 6 กลุ่มงาน (นับคนไม่ซ้ำชื่อ)</span>
