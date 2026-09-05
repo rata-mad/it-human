@@ -1,11 +1,9 @@
 <html lang="th">
 </head>
 <body class="bg-slate-50 p-4 md:p-6">
-
     <!-- 🔷 กล่อง Header สีน้ำเงิน (ปรับขนาดให้กระชับและโค้งมนแล้ว) -->
     <header class="bg-[#1e3a8a] text-white rounded-2xl max-w-6xl mx-auto p-4 md:p-6 shadow-md mb-6">
-        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-            
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">      
             <!-- ฝั่งซ้าย: ไอคอน + ข้อความหัวข้อ -->
             <div class="flex items-start gap-3">
                 <div class="p-2.5 bg-white/10 rounded-xl flex-shrink-0 mt-1">
@@ -25,7 +23,6 @@
                     </p>
                 </div>
             </div>
-
             <!-- ฝั่งขวา: เมนูสลับหน้า (ปรับขนาดปุ่มให้พอดี) -->
             <div class="flex bg-slate-900/40 p-1.5 rounded-xl border border-white/10 self-start lg:self-center">
                 <a href="#" class="px-3 py-1.5 rounded-lg bg-white text-slate-900 font-medium text-xs md:text-sm shadow-sm transition">
@@ -38,10 +35,8 @@
                     สรุปวิเคราะห์ & KPIs
                 </a>
             </div>
-
         </div>
     </header>
-
 </body>
 </html>
 <body class="bg-slate-50 min-h-screen flex flex-col">
