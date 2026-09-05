@@ -1,6 +1,6 @@
 <html lang="th">
 </head>
-<body class="bg-slate-50 p-4 md:p-5">
+<body class="bg-slate-50 p-4 md:p-6">
 
     <!-- 🔷 กล่อง Header สีน้ำเงิน (ปรับขนาดให้กระชับและโค้งมนแล้ว) -->
     <header class="bg-[#1e3a8a] text-white rounded-2xl max-w-6xl mx-auto p-4 md:p-6 shadow-md mb-6">
@@ -41,6 +41,7 @@
 
         </div>
     </header>
+
 </body>
 </html>
 <body class="bg-slate-50 min-h-screen flex flex-col">
