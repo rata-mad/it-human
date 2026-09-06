@@ -27,6 +27,14 @@
             max-height: 400px;
         }
     </style>
+    <nav class="flex bg-indigo-800 p-1 rounded-lg border border-indigo-700 mt-4">
+        <button id="btn-tab1" onclick="switchTab('tab1')" class="px-4 py-2 text-sm font-medium rounded-md transition-all bg-white text-indigo-900 shadow">
+            ผังองค์กร & ทำเนียบรายชื่อ
+        </button>
+        <button id="btn-tab2" onclick="switchTab('tab2')" class="px-4 py-2 text-sm font-medium rounded-md transition-all text-indigo-200 hover:text-white">
+            หน้าที่ความรับผิดชอบกลุ่มงาน
+        </button>
+    </nav>
 </head>
 <body class="p-4 md:p-6">
     <!-- 📍 วางแทนที่กล่องสีน้ำเงินเดิมตรงนี้ (หลัง <body>) -->
