@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
     <style>
         body {
             font-family: 'Prompt', 'Sarabun', sans-serif;
@@ -26,55 +28,109 @@
             height: 320px;
             max-height: 400px;
         }
-    </style>
-    </head>
-<body class="p-4 md:p-6">
-    <!-- 📍 วางแทนที่กล่องสีน้ำเงินเดิมตรงนี้ (หลัง <body>) -->
-    <header class="bg-[#1e3a8a] text-white rounded-2xl max-w-6xl mx-auto p-4 md:p-6 shadow-md mb-6">
-        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                        <!-- ฝั่งซ้าย: ข้อความหัวข้อ -->
-            <div class="flex items-start gap-3">
-                <div class="p-2.5 bg-white/10 rounded-xl flex-shrink-0 mt-1">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                    </svg>
-                </div>
-                <div>
-                    <h1 class="text-xl md:text-2xl font-bold leading-tight">
-                        ผังบุคลากร สำนักบริหารเทคโนโลยีสารสนเทศ
-                    </h1>
-                    <div class="border-t border-white/20 my-2"></div>
-                    <p class="text-xs md:text-sm text-blue-100 flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-full bg-green-400 inline-block"></span>
-                        คำสั่งมอบหมายหน้าที่ความรับผิดชอบ ผู้อนุมัติ: นางสาวมุทิตา ชูประดิษฐ์
-                    </p>
-                </div>
-            </div>
-            <!-- ฝั่งขวา: ปุ่มเมนู -->
-            <div class="flex bg-slate-900/40 p-1.5 rounded-xl border border-white/10 self-start lg:self-center">
-                <a href="#" class="px-3 py-1.5 rounded-lg bg-white text-slate-900 font-medium text-xs md:text-sm shadow-sm transition">
-                    ผังโครงสร้างองค์กร
-                </a>
-                <a href="#" class="px-3 py-1.5 rounded-lg text-white/80 hover:text-white hover:bg-white/10 font-medium text-xs md:text-sm transition">
-                    รายชื่อบุคลากร (ทำเนียบรวม)
-                </a>
-                <a href="#" class="px-3 py-1.5 rounded-lg text-white/80 hover:text-white hover:bg-white/10 font-medium text-xs md:text-sm transition">
-                    สรุปวิเคราะห์ & KPIs
-                </a>
-            </div>
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 360px;
+            }
+        }
+        .tab-btn.active {
+            background-color: #FFFFFF;
+            color: #1E3A8A;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            font-weight: 700;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
+        @media print {
+            header, footer, .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: #FFFFFF !important;
+                color: #000000 !important;
+            }
+            main {
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .tab-content {
+                display: block !important;
+                page-break-after: always;
+            }
+            .chart-container {
+                height: 280px !important;
+                max-height: 280px !important;
+            }
+            .shadow-sm, .shadow-md, .shadow-2xs {
+                box-shadow: none !important;
+            }
+            .border {
+                border-color: #CBD5E1 !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+
+    <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50 border-b border-slate-800" style="background-color: #1E3A8A;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-2xl border border-white/20">
+                        🏢
+                    </div>
+                    <div>
+                        <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white">
+                            ผังบุคลากร สำนักบริหารเทคโนโลยีสารสนเทศ
+                        </h1>
+                        <p class="text-xs sm:text-sm text-blue-200 font-sarabun flex items-center gap-2 mt-0.5">
+                            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+                            คำสั่งมอบหมายหน้าที่ความรับผิดชอบ ผู้อนุมัติ: นางสาวมุทิตา ชูประดิษฐ์
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3">
+                    <div class="flex items-center bg-blue-950/60 p-1.5 rounded-xl border border-blue-800/50 self-start lg:self-auto no-print">
+                        <button onclick="switchTab('chart')" id="tab-chart" class="tab-btn active px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium transition text-blue-100 hover:text-white flex items-center gap-1.5">
+                            <span>🌳</span> ผังโครงสร้างองค์กร
+                        </button>
+                        <button onclick="switchTab('directory')" id="tab-directory" class="tab-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium transition text-blue-100 hover:text-white flex items-center gap-1.5">
+                            <span>👥</span> รายชื่อบุคลากร (ทำเนียบรวม)
+                        </button>
+                        <button onclick="switchTab('analytics')" id="tab-analytics" class="tab-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium transition text-blue-100 hover:text-white flex items-center gap-1.5">
+                            <span>📊</span> สรุปวิเคราะห์ & KPIs
+                        </button>
+                    </div>
+
+                    <div class="flex items-center gap-2 no-print">
+                                        </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- ⬇️ โค้ดกล่องผู้บริหารด้านล่างและส่วนอื่นๆ ของคุณอยู่ตรงนี้ต่อได้เลย -->
-</body>
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6" id="pdf-export-content">
+
         <section id="content-chart" class="tab-content active space-y-8 bg-slate-50 p-2 rounded-xl">
-                        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+            
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
                 <div class="text-center max-w-3xl mx-auto space-y-4">
                     <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-900 font-sarabun">
                         👑 ผู้บริหารและผู้เชี่ยวชาญกำกับดูแล
                     </span>
+                    
                     <div class="flex flex-col items-center gap-2 pt-2">
                         <div class="w-full max-w-lg bg-gradient-to-br from-slate-900 to-blue-950 text-white rounded-xl p-4 border border-slate-700 shadow flex items-start gap-3">
                             <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center text-xl shrink-0">
@@ -86,6 +142,7 @@
                                 <p class="text-xs text-slate-300 font-sarabun mt-0.5">ผู้อำนวยการสำนัก / ผู้อนุมัติคำสั่งมอบหมายหน้าที่</p>
                             </div>
                         </div>
+
                         <div class="flex flex-col items-center py-1">
                             <div class="w-0.5 h-6 bg-blue-600"></div>
                             <div class="text-blue-600 text-xs font-bold leading-none">▼</div>
@@ -104,6 +161,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="text-center text-slate-400 text-sm font-sarabun flex items-center justify-center gap-2">
                 <span class="h-0.5 w-12 bg-slate-300 inline-block"></span>
                 <span>จำนวนกำลังพลจำแนกตาม 6 กลุ่มงาน (นับคนไม่ซ้ำชื่อ)</span>
@@ -1058,3 +1116,9 @@
     </script>
 </body>
 </html>
+```
+
+### สิ่งที่ปรับปรุงและเพิ่มเข้ามา:
+1. **เพิ่มคอลัมน์ตำแหน่งทางราชการ/สายงานในทำเนียบรวม:** เพิ่มคอลัมน์ **"ตำแหน่งทางราชการ / สายงาน"** ในตารางทำเนียบบุคลากร เพื่อแสดงตำแหน่งของทุกคนครบทั้ง 63 รายชื่อ (เช่น *นักวิชาการคอมพิวเตอร์เชี่ยวชาญ, ชำนาญการพิเศษ, ชำนาญการ, ปฏิบัติการ, เจ้าพนักงานเครื่องคอมพิวเตอร์, เจ้าพนักงานธุรการ, นักจัดการงานทั่วไป* เป็นต้น)
+2. **แสดงตำแหน่งในผังโครงสร้าง:** เพิ่มการแสดงตำแหน่งทางราชการต่อท้ายชื่อเจ้าหน้าที่และผู้บริหารในผังองค์กร
+3. **ระบบค้นหา (Search Filter):** สามารถพิมพ์ค้นหาด้วย **"ชื่อตำแหน่ง"** (เช่น พิมพ์ค้นหา *"ชำนาญการพิเศษ"* หรือ *"เจ้าพนักงาน"*) เพื่อคัดกรองบุคลากรตามตำแหน่งสายงานได้อย่างรวดเร็ว
