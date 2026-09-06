@@ -11,15 +11,7 @@
         .tab-btn.active { background-color: #1e3a8a; color: #ffffff; border-color: #1e3a8a; }
     </style>
     <section id="tab1" class="space-y-6">
-    <nav class="flex bg-indigo-800 p-1 rounded-lg border border-indigo-700 mt-4">
-    <button id="btn-tab1" onclick="switchTab('tab1')" class="px-4 py-2 text-sm font-medium rounded-md transition-all bg-white text-indigo-900 shadow">
-        ผังองค์กร & ทำเนียบรายชื่อ
-    </button>
-    <button id="btn-tab2" onclick="switchTab('tab2')" class="px-4 py-2 text-sm font-medium rounded-md transition-all text-indigo-200 hover:text-white">
-        หน้าที่ความรับผิดชอบกลุ่มงาน
-    </button>
-</nav>
-        </section>
+            </section>
     <section id="tab2" class="hidden space-y-6">
     <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
         <h2 class="text-lg font-bold text-slate-800 mb-1">หน้าที่และความรับผิดชอบของแต่ละกลุ่มงาน</h2>
