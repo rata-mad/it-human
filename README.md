@@ -51,8 +51,8 @@
     <header class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
-                <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-blue-100">สำนักบริหารเทคโนโลยีสารสนเทศ[cite: 1]</h1>
-                <p class="text-xs text-slate-400 mt-1">คำสั่งมอบหมายหน้าที่ความรับผิดชอบ (ลว. 5 กันยายน 2569)[cite: 1]</p>
+                <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-blue-100">สำนักบริหารเทคโนโลยีสารสนเทศ</h1>
+                <p class="text-xs text-slate-400 mt-1">คำสั่งมอบหมายหน้าที่ความรับผิดชอบ (ลว. 5 กันยายน 2569)</p>
             </div>
             <!-- Tab Buttons -->
             <div class="flex bg-slate-800 p-1 rounded-xl border border-slate-700">
@@ -76,23 +76,23 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                     <p class="text-xs font-semibold text-slate-400 uppercase">ผู้อำนวยการสำนัก</p>
-                    <p class="text-lg font-bold text-slate-800 mt-1">นางสาวมุทิตา ชูประดิษฐ์[cite: 1]</p>
-                    <p class="text-xs text-blue-600 mt-0.5">ผู้อำนวยการสำนักบริหารเทคโนโลยีสารสนเทศ[cite: 1]</p>
+                    <p class="text-lg font-bold text-slate-800 mt-1">นางสาวมุทิตา ชูประดิษฐ์</p>
+                    <p class="text-xs text-blue-600 mt-0.5">ผู้อำนวยการสำนักบริหารเทคโนโลยีสารสนเทศ</p>
                 </div>
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                     <p class="text-xs font-semibold text-slate-400 uppercase">ผู้เชี่ยวชาญกำกับดูแล</p>
-                    <p class="text-lg font-bold text-slate-800 mt-1">นายเทวัญ แก้วศักดาศิริ[cite: 1]</p>
-                    <p class="text-xs text-blue-600 mt-0.5">นักวิชาการคอมพิวเตอร์เชี่ยวชาญ[cite: 1]</p>
+                    <p class="text-lg font-bold text-slate-800 mt-1">นายเทวัญ แก้วศักดาศิริ</p>
+                    <p class="text-xs text-blue-600 mt-0.5">นักวิชาการคอมพิวเตอร์เชี่ยวชาญ</p>
                 </div>
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                     <p class="text-xs font-semibold text-slate-400 uppercase">กลุ่มงานหลัก & ฝ่ายบริหาร</p>
-                    <p class="text-2xl font-bold text-slate-800 mt-1">6 กลุ่มงาน + 1 ฝ่าย[cite: 1]</p>
+                    <p class="text-2xl font-bold text-slate-800 mt-1">6 กลุ่มงาน + 1 ฝ่าย </p>
                     <p class="text-xs text-emerald-600 mt-0.5">ครอบคลุมทุกภารกิจดิจิทัล</p>
                 </div>
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                     <p class="text-xs font-semibold text-slate-400 uppercase">จำนวนบุคลากรทั้งหมด (Unique)</p>
                     <p class="text-2xl font-bold text-slate-800 mt-1">62 คน</p>
-                    <p class="text-xs text-slate-500 mt-0.5">ข้าราชการ/พนักงาน/ลูกจ้าง[cite: 1]</p>
+                    <p class="text-xs text-slate-500 mt-0.5">ข้าราชการ/พนักงาน/ลูกจ้าง </p>
                 </div>
             </div>
 
@@ -104,17 +104,17 @@
                     
                     <!-- Director -->
                     <div class="text-center p-4 bg-blue-900 text-white rounded-xl shadow-md max-w-md mx-auto">
-                        <p class="text-xs text-blue-200">ผู้อำนวยการสำนักบริหารเทคโนโลยีสารสนเทศ[cite: 1]</p>
-                        <p class="text-base font-bold">นางสาวมุทิตา ชูประดิษฐ์[cite: 1]</p>
+                        <p class="text-xs text-blue-200">ผู้อำนวยการสำนักบริหารเทคโนโลยีสารสนเทศ</p>
+                        <p class="text-base font-bold">นางสาวมุทิตา ชูประดิษฐ์</p>
                     </div>
 
                     <div class="w-0.5 h-6 bg-slate-300 mx-auto"></div>
 
                     <!-- Senior Expert -->
                     <div class="text-center p-3 bg-slate-100 border border-slate-300 rounded-xl max-w-sm mx-auto">
-                        <p class="text-xs text-slate-500">ผู้เชี่ยวชาญกำกับดูแล (นักวิชาการคอมพิวเตอร์เชี่ยวชาญ)[cite: 1]</p>
-                        <p class="text-sm font-semibold text-slate-800">นายเทวัญ แก้วศักดาศิริ[cite: 1]</p>
-                        <p class="text-xs text-slate-500 mt-1">(กำกับดูแล กลุ่มงานบริหารจัดการระบบคอมพิวเตอร์ฯ & กลุ่มงานบริหารเครือข่ายฯ)[cite: 1]</p>
+                        <p class="text-xs text-slate-500">ผู้เชี่ยวชาญกำกับดูแล (นักวิชาการคอมพิวเตอร์เชี่ยวชาญ)</p>
+                        <p class="text-sm font-semibold text-slate-800">นายเทวัญ แก้วศักดาศิริ</p>
+                        <p class="text-xs text-slate-500 mt-1">(กำกับดูแล กลุ่มงานบริหารจัดการระบบคอมพิวเตอร์ฯ & กลุ่มงานบริหารเครือข่ายฯ)</p>
                     </div>
 
                     <div class="w-0.5 h-6 bg-slate-300 mx-auto"></div>
@@ -122,19 +122,19 @@
                     <!-- Groups List -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                         <div class="p-3 bg-slate-50 border rounded-lg">
-                            <p class="font-bold text-blue-900">1. กลุ่มงานพัฒนาระบบสารสนเทศ[cite: 1]</p>
-                            <p class="text-slate-600">ผอ.: นายนัฐพงษ์ บุญวงศ์[cite: 1]</p>
+                            <p class="font-bold text-blue-900">1. กลุ่มงานพัฒนาระบบสารสนเทศ</p>
+                            <p class="text-slate-600">ผอ.: นายนัฐพงษ์ บุญวงศ์</p>
                         </div>
                         <div class="p-3 bg-slate-50 border rounded-lg">
-                            <p class="font-bold text-blue-900">2. กลุ่มงานบริหารจัดการระบบคอมพิวเตอร์และประมวลผล[cite: 1]</p>
-                            <p class="text-slate-600">ผอ.: นายไกรรัฐ อาภาบุษยพันธุ์ (รักษาการ)[cite: 1]</p>
+                            <p class="font-bold text-blue-900">2. กลุ่มงานบริหารจัดการระบบคอมพิวเตอร์และประมวลผล</p>
+                            <p class="text-slate-600">ผอ.: นายไกรรัฐ อาภาบุษยพันธุ์ (รักษาการ)</p>
                         </div>
                         <div class="p-3 bg-slate-50 border rounded-lg">
-                            <p class="font-bold text-blue-900">3. กลุ่มงานบริหารเครือข่ายสื่อสารและความมั่นคงคอมพิวเตอร์[cite: 1]</p>
-                            <p class="text-slate-600">ผอ.: นายธนวัต สาธานนท์[cite: 1]</p>
+                            <p class="font-bold text-blue-900">3. กลุ่มงานบริหารเครือข่ายสื่อสารและความมั่นคงคอมพิวเตอร์</p>
+                            <p class="text-slate-600">ผอ.: นายธนวัต สาธานนท์</p>
                         </div>
                         <div class="p-3 bg-slate-50 border rounded-lg">
-                            <p class="font-bold text-blue-900">4. กลุ่มงานบริการเทคโนโลยีสารสนเทศ[cite: 1]</p>
+                            <p class="font-bold text-blue-900">4. กลุ่มงานบริการเทคโนโลยีสารสนเทศ</p>
                             <p class="text-slate-600">ผอ.: นายธนากร ชัยวิชู (รักษาการ)</p>
                         </div>
                         <div class="p-3 bg-slate-50 border rounded-lg">
