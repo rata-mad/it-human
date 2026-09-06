@@ -10,6 +10,48 @@
         body { font-family: 'Prompt', 'Sarabun', sans-serif; background-color: #f8fafc; }
         .tab-btn.active { background-color: #1e3a8a; color: #ffffff; border-color: #1e3a8a; }
     </style>
+    <section id="tab1" class="space-y-6">
+    <nav class="flex bg-indigo-800 p-1 rounded-lg border border-indigo-700 mt-4">
+    <button id="btn-tab1" onclick="switchTab('tab1')" class="px-4 py-2 text-sm font-medium rounded-md transition-all bg-white text-indigo-900 shadow">
+        ผังองค์กร & ทำเนียบรายชื่อ
+    </button>
+    <button id="btn-tab2" onclick="switchTab('tab2')" class="px-4 py-2 text-sm font-medium rounded-md transition-all text-indigo-200 hover:text-white">
+        หน้าที่ความรับผิดชอบกลุ่มงาน
+    </button>
+</nav>
+        </section>
+    <section id="tab2" class="hidden space-y-6">
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+        <h2 class="text-lg font-bold text-slate-800 mb-1">หน้าที่และความรับผิดชอบของแต่ละกลุ่มงาน</h2>
+        <p class="text-sm text-slate-500 mb-6">สรุปขอบเขตภารกิจและสายงานการกำกับดูแลภายในสำนักบริหารเทคโนโลยีสารสนเทศ</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-5 rounded-lg border border-slate-200 bg-slate-50">
+                <h3 class="font-bold text-indigo-900 text-base mb-2">ฝ่ายบริหารทั่วไป</h3>
+                <p class="text-sm text-slate-600">รับผิดชอบงานสารบรรณ งานธุรการ งานบริหารบุคคล การเงินและบัญชี งบประมาณ พัสดุ ยานพาหนะ อาคารสถานที่ และงานสนับสนุนการบริหารทั่วไป</p>
+            </div>
+            <div class="p-5 rounded-lg border border-slate-200 bg-slate-50">
+                <h3 class="font-bold text-indigo-900 text-base mb-2">1. กลุ่มงานพัฒนาระบบสารสนเทศ</h3>
+                <p class="text-sm text-slate-600">ศึกษา วิเคราะห์ ออกแบบ พัฒนา และบำรุงรักษาระบบสารสนเทศกองทุนประกันสังคม กองทุนเงินทดแทน และระบบงานสนับสนุน</p>
+            </div>
+            <div class="p-5 rounded-lg border border-slate-200 bg-slate-50">
+                <h3 class="font-bold text-indigo-900 text-base mb-2">2. กลุ่มงานบริหารจัดการระบบคอมพิวเตอร์และประมวลผล</h3>
+                <p class="text-sm text-slate-600">กำกับดูแลเครื่องแม่ข่าย (Server) ซอฟต์แวร์ระบบ ระบบฐานข้อมูล ศูนย์คอมพิวเตอร์ (Data Center) และประมวลผลข้อมูล</p>
+            </div>
+            <div class="p-5 rounded-lg border border-slate-200 bg-slate-50">
+                <h3 class="font-bold text-indigo-900 text-base mb-2">3. กลุ่มงานบริหารเครือข่ายสื่อสารและความมั่นคงคอมพิวเตอร์</h3>
+                <p class="text-sm text-slate-600">บริหารจัดการระบบโครงข่ายสื่อสาร (LAN/WAN) ระบบรักษาความมั่นคงปลอดภัยไซเบอร์ และกำกับมาตรฐานความปลอดภัยสารสนเทศ</p>
+            </div>
+            <div class="p-5 rounded-lg border border-slate-200 bg-slate-50">
+                <h3 class="font-bold text-indigo-900 text-base mb-2">4. กลุ่มงานบริการเทคโนโลยีสารสนเทศ</h3>
+                <p class="text-sm text-slate-600">จัดทำแผนปฏิบัติการดิจิทัล จัดฝึกอบรมด้าน IT จัดทำสถาปัตยกรรมองค์กร (EA) และประสานงานประเมินผลภาครัฐ (PMQA)</p>
+            </div>
+            <div class="p-5 rounded-lg border border-slate-200 bg-slate-50">
+                <h3 class="font-bold text-indigo-900 text-base mb-2">5. กลุ่มงานบริการอิเล็กทรอนิกส์</h3>
+                <p class="text-sm text-slate-600">พัฒนาระบบ e-Services, Line Official, บูรณาการคลังข้อมูลองค์กร (Big Data) และการจัดทำธรรมาภิบาลข้อมูล (Data Governance)</p>
+            </div>
+        </div>
+    </div>
+</section>
 </head>
 <body class="text-slate-800 antialiased min-h-screen flex flex-col">
 
@@ -430,5 +472,23 @@
             });
         };
     </script>
+    <script>
+    function switchTab(tabId) {
+        document.getElementById('tab1').classList.add('hidden');
+        document.getElementById('tab2').classList.add('hidden');
+        document.getElementById(tabId).classList.remove('hidden');
+
+        const btn1 = document.getElementById('btn-tab1');
+        const btn2 = document.getElementById('btn-tab2');
+
+        if (tabId === 'tab1') {
+            btn1.className = "px-4 py-2 text-sm font-medium rounded-md transition-all bg-white text-indigo-900 shadow";
+            btn2.className = "px-4 py-2 text-sm font-medium rounded-md transition-all text-indigo-200 hover:text-white";
+        } else {
+            btn2.className = "px-4 py-2 text-sm font-medium rounded-md transition-all bg-white text-indigo-900 shadow";
+            btn1.className = "px-4 py-2 text-sm font-medium rounded-md transition-all text-indigo-200 hover:text-white";
+        }
+    }
+</script>
 </body>
 </html>
